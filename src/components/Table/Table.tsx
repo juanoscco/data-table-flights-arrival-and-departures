@@ -113,11 +113,6 @@ const Table: React.FC<TableProps> = ({ type, iataCode }) => {
               </thead>
               <tbody>
                 {state.data
-                  .sort(
-                    (a, b) =>
-                      new Date(b.departure.scheduledTime).getTime() -
-                      new Date(a.departure.scheduledTime).getTime()
-                  )
                   .filter(
                     (item: any) =>
                       item.flight.iataNumber
@@ -129,6 +124,11 @@ const Table: React.FC<TableProps> = ({ type, iataCode }) => {
                       item.arrival.iataCode
                         .toLowerCase()
                         .includes(searchValue.toLowerCase())
+                  )
+                  .sort(
+                    (a, b) =>
+                      new Date(b.departure.scheduledTime).getTime() -
+                      new Date(a.departure.scheduledTime).getTime()
                   )
                   .slice(
                     (state.currentPage - 1) * state.itemsPerPage,
