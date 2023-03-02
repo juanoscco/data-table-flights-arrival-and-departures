@@ -86,7 +86,9 @@ const Table: React.FC<TableProps> = ({ type, iataCode }) => {
   return (
     <TableContext.Provider value={state}>
       {state.loading ? (
-        <p className="text-white align-items-center justify-content-center">Loading...</p>
+        <div className="d-flex align-items-center justify-content-center" style={{ minHeight: "55vh"}}>
+          <p className="text-white">Loading...</p>
+        </div>
       ) : state.error ? (
         <p className="text-white">Error: {state.error}</p>
       ) : (

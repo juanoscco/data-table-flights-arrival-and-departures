@@ -7,7 +7,7 @@
 	}
 }
 .App-logo {
-	height: 10vmin;
+	height: 7.5vmin;
 	pointer-events: none;
 }
 ul {
@@ -16,7 +16,7 @@ ul {
 		a {
 			text-decoration: none;
 			color: white;
-      		font-size: calc(8px + 2vmin);
+      		font-size: calc(6px + 2vmin);
 			&:hover{
 				color: #61dafb;
 			}
@@ -46,6 +46,9 @@ nav {
 	}
 }
 @media (max-width: 768px) {
+	.App-logo {
+		height: 11.2vmin;
+	}
 	nav {
 		justify-content: space-between;
 		.burger {
@@ -76,7 +79,13 @@ nav {
 			align-items: center;
 			opacity: 0;
 			transition: 0.3s;
+			li {
+				a {
+					font-size: calc(25px + 2vmin);
+				}
+			}
 		}
+		
 		ul.nav-list.active {
 			opacity: 1;
 			left: 0;

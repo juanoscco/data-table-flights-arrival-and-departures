@@ -14,7 +14,6 @@ const Navbar = () => {
         <Link to="/"><img src={logo} alt={logo} className="App-logo img-fluid" /></Link>
         <ul className={`nav-list ${isBurgerActive ? "active" : ""} d-flex gap-5`}>
           <li className="nav-item">
-            
             <Link to="/departure" onClick={handleNavItemClick}>
               Salidas
             </Link>

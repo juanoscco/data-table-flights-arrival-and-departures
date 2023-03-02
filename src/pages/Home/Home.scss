@@ -1,0 +1,68 @@
+@keyframes ilustrationAnimate {
+	0% {
+		transform: translateY(1);
+	}
+	100% {
+		transform: scale(0.9);
+	}
+}
+@keyframes blink {
+	from,to {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.typing-animation {
+	display: inline-block;
+	margin: 50px auto;
+	text-align: center;
+	font-size: 28px;
+	color: #fff;
+	overflow: hidden;
+	border-right: 0.15em solid orange;
+	white-space: pre-wrap;
+	letter-spacing: 0.15em;
+}
+
+span {
+    font-weight: 700;
+}
+
+p {
+    margin: 1px auto;
+    letter-spacing: 0.1px;
+    font-weight: 300;
+}
+
+.animation-scss {
+	animation: ilustrationAnimate ease-in 5s infinite alternate;
+}
+.cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 0;
+	height: 1.2em;
+	margin-left: 5px;
+	background-color: #333;
+}
+.blink {
+	animation: blink 0.1s step-start infinite;
+}
+@media (max-width: 900px) {
+	.d-flex {
+        align-items: center;
+		flex-direction: column;
+	}
+}
+
+
+@media (max-width: 768px) {
+	.d-flex {
+		flex-direction: column;
+	}
+    .animation-scss{
+        display: none;
+    }
+}
