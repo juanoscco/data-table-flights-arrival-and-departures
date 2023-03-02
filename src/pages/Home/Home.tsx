@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import HeaderImg from "../../assets/header-img.svg";
 
 import "./Home.scss";
@@ -56,10 +55,6 @@ const Home = () => {
           <div className={`cursor${blink ? " blink" : ""}`}></div>
         </div>
         <p>¡Bienvenido al aeropuerto! ¿Estás esperando a alguien o deseas seguir su vuelo? Manténte actualizado con la información de llegadas y salidas en tiempo real en nuestro panel de información. Con solo unos click, podrás conocer el estado de los vuelos, los horarios de llegadas y salidas, y cualquier cambio en la programación. ¡Viajar nunca ha sido tan fácil!</p>
-        <div className="btn-group mt-5" >
-        <Link to="/arrival" className="btn btn-warning">Llegadas</Link>
-        <Link to="/departures" className="btn btn-warning">Salidas</Link>
-        </div>
       </div>
       <div className="col-md-6">
         <img className="img-fluid animation-scss" src={HeaderImg} alt="Header-img" />
