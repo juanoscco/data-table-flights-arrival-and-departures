@@ -1,27 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Table } from './components';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Navbar } from "./components";
+import { AviationArrival, AviationDeparture, Home } from "./pages";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <img src={logo} className="App-logo" alt="logo" />
-        <Table type='arrival' iataCode='LIM'/>
-      </header>
-      
-      
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Route path='/' exact component={Home}/>
+          <Route path='/arrival/'component={AviationArrival}/>
+          <Route path="/departure/" component={AviationDeparture}/>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
