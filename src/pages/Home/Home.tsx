@@ -54,10 +54,33 @@ const Home = () => {
           <span>{text}</span>
           <div className={`cursor${blink ? " blink" : ""}`}></div>
         </div>
-        <p>¡Bienvenido al aeropuerto! ¿Estás esperando a alguien o deseas seguir su vuelo? Manténte actualizado con la información de llegadas y salidas en tiempo real en nuestro panel de información. Con solo unos click, podrás conocer el estado de los vuelos, los horarios de llegadas y salidas, y cualquier cambio en la programación. ¡Viajar nunca ha sido tan fácil!</p>
+        <p>
+          ¡Bienvenido al aeropuerto! ¿Estás esperando a alguien o deseas seguir
+          su vuelo? Manténte actualizado con la información de llegadas y
+          salidas en tiempo real en nuestro panel de información. Con solo unos
+          click, podrás conocer el estado de los vuelos, los horarios de
+          llegadas y salidas, y cualquier cambio en la programación. ¡Viajar
+          nunca ha sido tan fácil!
+        </p>
       </div>
       <div className="col-md-6">
-        <img className="img-fluid animation-scss" src={HeaderImg} alt="Header-img" />
+        <img
+          className="img-fluid animation-scss"
+          src={HeaderImg}
+          alt="Header-img"
+        />
+      </div>
+      <div className="position-absolute bottom-0 start-50 translate-middle-x text-white">
+        <p>
+          Creado por{" "}
+          <a
+            href="https://Github.com/JuanOsccoMori"
+            target="_blank"
+            rel="noreferrer"
+          >
+            @Juan
+          </a>
+        </p>
       </div>
     </div>
   );

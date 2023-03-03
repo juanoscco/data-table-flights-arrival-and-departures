@@ -14,11 +14,7 @@ function App() {
           <Route path="/arrival/" component={AviationArrival} />
           <Route path="/departure/" component={AviationDeparture} />
         </Switch>
-        <footer className="position-absolute bottom-0 start-50 translate-middle-x text-white">
-          <p>
-            Creado por <a href="https://Github.com/JuanOsccoMori" target="_blank" rel="noreferrer">@Juan</a>
-          </p>
-        </footer>
+        
       </div>
     </Router>
   );
